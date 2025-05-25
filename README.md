@@ -1,70 +1,121 @@
 # Getting Started with Create React App
+✨ Key Functionalities Explanition
+🔍 Top Navigation Bar
+**Logo & Branding:** Displays the ShopIT logo and name, maintaining brand identity.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Search Bar**: Allows the admin to search for a product by name across the platform.
 
-## Available Scripts
+**Cart Indicator:** Shows the number of items currently in the cart.
 
-In the project directory, you can run:
+**Admin Profile** Dropdown: Includes options for viewing the admin profile or logging out.
 
-### `npm start`
+**📊 Main Dashboard Area
+🗓️ Date Filters**
+Start Date & End Date Fields: Let the admin define a date range for filtering analytics (like sales and orders) between specific time frames.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Fetch Button: On click, triggers the dashboard to refresh and show filtered sales and order stats.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**📦 Stats Overview
+Sales Card (Green):**
 
-### `npm test`
+Displays total revenue ($0.00) generated in the selected date range.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Helps monitor performance in real-time.
 
-### `npm run build`
+Orders Card (Red):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Shows the number of orders (0) placed in the selected date range.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Useful for daily/weekly tracking.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**📂 Sidebar Navigation
+1. Dashboard**
+Default landing page showing key stats like sales and orders with date filters.
 
-### `npm run eject`
+**2. New Product**
+Redirects to a form where the admin can add a new product, including name, price, images, stock, etc.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**3. Products**
+Displays a list of all existing products with options to edit or delete.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Helps manage inventory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**4. Orders**
+Lists all customer orders with statuses (e.g., pending, delivered).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Admins can update order statuses or view order details.
 
-## Learn More
+**5. Users**
+Shows registered users of the platform.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Admins can view, manage, or remove users if needed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**6. Reviews**
+Displays all product reviews submitted by users.
 
-### Code Splitting
+Admins can approve, respond to, or remove inappropriate reviews.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+⚙️ Dependencies
+The following packages are required to run the ShopIT front-end:
 
-### Analyzing the Bundle Size
+Package	Purpose
+React	Core library for building UI
+React Router DOM	Client-side routing
+Axios	API requests to backend
+React Icons / FontAwesome	Icon library
+Moment.js / Day.js (optional)	Date formatting
+Bootstrap / Tailwind CSS / Custom CSS	Styling and layout
+React Toastify	Notifications (toasts)
+Chart.js / Recharts (optional)	Admin dashboard charts
+React Hook Form / Formik (optional)	Advanced form handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The exact list depends on your codebase. You can check in your package.json file.
 
-### Making a Progressive Web App
+**🧪 Installation Instructions
+** Follow these steps to set up the ShopIT front-end locally:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**1. Clone the Repository**
+bash
+Copy
+Edit
+git clone https://github.com/your-username/ShopIT-frontend.git
+cd ShopIT-frontend
+**2. Install Dependencies**
+Make sure you have Node.js installed.
 
-### Advanced Configuration
+bash
+Copy
+Edit
+npm install
+**3. Create a .env File**
+Create a file named .env in the root directory and add your API base URL:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+bash
+Copy
+Edit
+REACT_APP_API_URL=http://localhost:5000/api
+Replace with your actual backend URL or hosted API.
 
+**🚀 Running the Front-End Locally**
+bash
+Copy
+Edit
+npm start
+Runs the app in development mode.
+
+Open http://localhost:3000 to view in your browser.
+
+The page reloads when you make changes.
+
+**🛠️ Build for Production**
+bash
+Copy
+Edit
+npm run build
+Builds the app for production to the build/ folder.
+
+It bundles React in optimized mode.
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
